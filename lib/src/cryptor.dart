@@ -1227,7 +1227,6 @@ class _Cryptor {
 
   void _validateHMAC(
       Uint8List key, Uint8List data, Uint8List hash, _HmacType ht) {
-    print('_validateHMAC: $key');
     Uint8List calculated = hmacSha256(key, data);
     if (hash.isNotEqual(calculated)) {
       _log('CALCULATED HMAC', calculated);
